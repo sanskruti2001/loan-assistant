@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loan Product Assistant (BoM)</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      🏦 Loan Product Assistant (Bank of Maharashtra)
+    </div>
+
+    <div class="chat-box">
+      {% if messages %}
+        {% for msg in messages %}
+          <div class="message {{ msg.sender }}">
+            <div class="bubble">
+              {% if msg.sender == 'bot' %}
+                🤖 {{ msg.text }}
+              {% else %}
+                {{ msg.text }}
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <div class="message bot">
+          <div class="bubble">👋 Hi there! Ask me anything about our loan products.</div>
+        </div>
+      {% endif %}
+    </div>
+
+    <form method="post" class="input-area">
+      <input
+        type="text"
+        name="question"
+        placeholder="Type your question..."
+        required
+      />
+      <button type="submit">Ask</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+venv/
+.env
+indexes/
+data/raw/
+data/embeddings.jsonl

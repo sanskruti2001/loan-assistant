@@ -1,0 +1,14 @@
+requests
+beautifulsoup4
+playwright           
+tqdm
+pandas
+faiss-cpu
+sentence-transformers
+transformers[sentencepiece]  
+openai               
+python-dotenv
+fastapi
+uvicorn[standard]
+tiktoken              
+nltk
