@@ -16,7 +16,7 @@ Environment Setup:
         - source venv/bin/activate
 
     2) Install dependencies:
-        - pip install requirements.txt
+        - pip install -r requirements.txt
 
     3) Environment variables
         - Create a file named .env in the project root:
